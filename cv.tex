@@ -1,0 +1,159 @@
+\documentclass[11pt, a4paper, roman]{moderncv}
+
+\moderncvtheme[blue]{banking}
+
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.9]{geometry}
+\usepackage{multicol}
+
+\name{Zach}{Sahlin}
+\email{zach@sahlins.net}
+\mobile{206-607-7655}
+\social[github]{GoneSahlin}
+
+\newcommand{\project}[5]{
+	\textbf{#1}\href{#2}{\:\small\faGithub\:}$|$ #3 
+	\hfill\textit{#4}
+	#5
+	\vspace{2mm}
+}
+
+\newcommand{\entry}[4]{
+	\textbf{#1}\:$|$\:#2 
+	\hfill\textit{#3}
+	#4
+	\vspace{2mm}
+}
+
+\newcommand{\education}[5]{
+	\textbf{#1} $|$ #2
+	\hfill#3
+	\\\textit{#4}
+	#5
+	\vspace{2mm}
+}
+
+\begin{document}
+\maketitle
+\vspace*{-12mm}
+
+\begin{multicols}{2}
+	\section{RELATED COURSEWORK}
+
+	\begin{itemize}
+		\item Algorithms \& Abstract Data Structures
+		\item Machine Learning \& Intelligent Systems
+		\item Operating Systems
+		\item Database Management Systems
+		% \item Software Development
+		\item Data Science Algorithms (current)
+		\item Programming Languages \& Compilers (current)
+	\end{itemize}
+	
+	\columnbreak  
+	
+	\section{TECHNICAL SKILLS}
+	
+	\begin{itemize}
+		\item Proficient: C++, Java, Python
+		\item Previous Experience: SQL, MATLAB, HTML, PHP
+		\item Tools: Git, Linux, Docker, Jupyter
+		\item Libraries: pandas, NumPy, scikit-learn, Matplotlib
+	\end{itemize}
+\end{multicols}
+
+\section{EDUCATION}
+
+{\education{Gonzaga University}{Spokane, WA}{Aug 2019 -- Expected May 2023}{BS in Computer Science, Minor in Applied Mathematics}
+	{\begin{itemize}
+    		\item GPA: 3.86
+    		\item President's List: Fall 2019, Spring 2020, Spring 2021
+    		\item Dean's List: Fall 2020, Fall 2021
+	\end{itemize}
+}
+
+\section{PROJECTS}
+
+\project{Fantasy Football Drafter}{https://github.com/GoneSahlin/fantasydraft}{Python, Sphinx}{Ongoing}
+	{\begin{itemize}
+		\item Models a fantasy football draft to use for testing.
+		\item Tests and compares different drafting algorithms against each other.
+		\item Uses Sphinx to create documentation.
+	\end{itemize}}
+}
+{\project{Spotify Predictor}{https://github.com/GoneSahlin/CPSC222Final}{Python, pandas, scikit-learn, Matplotlib}{Fall 2020}
+	{\begin{itemize}
+    		\item Uses a decision tree and kNN to predict whether I will skip a song with an 81\% accuracy.
+    		\item Connects to the Spotify API to gather additional data on each song.
+   		 \item Uses Matplotlib to create plots to analyze the dataset.
+	\end{itemize}}
+}
+{\project{Nim Solver}{https://github.com/GoneSahlin/Nim}{Python}{Fall 2021}
+	{\begin{itemize}
+    		\item Models and plays the game of Nim using the optimal strategy for both 2 and 3 player games.
+    		\item Builds a graph of all possible states, calculates each state's probability of winning, and picks the best move.
+	\end{itemize}}
+}
+{\project{Ski Resort Database}{https://github.com/GoneSahlin/321_Final_Project}{SQL, HTML, PHP}{Fall 2021}
+	{\begin{itemize}
+    		\item Connects webpages to a mySQL database to display information on ski resorts.
+	\end{itemize}}
+}
+{\project{Yahtzee}{https://github.com/Gonzaga-University/yahtzee-final-game-a-a-r-o-n}{Java, Swing, JUnit}{Spring 2021}
+	{\begin{itemize}
+    		\item Models Yahtzee with a resizable GUI and customizable settings and utilizes JUnit to implement unit testing.
+	\end{itemize}}
+}
+{\project{Bike Trail Classifier}{https://github.com/GoneSahlin/BikeTrailSVM}{Python, pandas, scikit-learn}{Fall 2021}
+	{\begin{itemize}
+    		\item Classifies bike trails into difficulties using a SVM with a 66\% accuracy.
+	\end{itemize}}
+}
+{\project{Linux Kernel Module}{https://github.com/GU-2021-Fall-CPSC346/hw5-linux-kernel-module-dev-GoneSahlin}{C}{Fall 2021}
+	{\begin{itemize}
+   		\item Modifies the Linux kernel with a simple module that can be loaded and unloaded.
+	\end{itemize}}
+}
+
+\section{WORK EXPERIENCE}
+
+\entry{iD Tech}{Online Private Instructor}{June 2021 -- Present}
+	{\begin{itemize}
+		\item Tutored in 8 different computer science topics, including C++, Java, and Python.
+		\item Completed over 100 private lessons.
+		% \item Completed over 100 private lessons in various computer science topics including C++, Java, and Python.
+		\item Built relationships with long-term clients, and developed further skills in communication and coding.
+		\item Collaborated with other instructors to improve teaching methods.
+	\end{itemize}
+}
+{\entry{University Presbyterian Church}{Kitchen and Event Assistant}{August 2018 -- August 2019}
+	{\begin{itemize}
+   		\item Worked in a team to prepare food for congregants and homeless, numbering up to 700 people.
+    		\item Led groups of volunteers to serve food for the international community.
+  	\end{itemize}}
+}
+
+\section{VOLUNTEER EXPERIENCE}
+
+{\entry{Camp Side-By-Side}{Volunteer Buddy}{July 2019}
+	{\begin{itemize}
+		\item Volunteered at a week-long camp for families of Seattle Children's patients with a serious illness.
+		\item Served as a "buddy" for sibling of a seriously ill patient, accompanying him in all camp activities.
+	\end{itemize}}
+}
+{\entry{Easter Project Mexico Trip}{Student Building Team Leader}{April 2017, April 2018, April 2019}
+	{\begin{itemize}
+		%\item Worked on a team to build houses in Tijuana during Spring Break.
+		% \item Was responsible for teaching part of the building process to the team.
+		\item Led a team of 10 students building houses in Tijuana during Spring Break.
+		% \item Worked to fundraise money for the trip
+	\end{itemize}}
+}
+
+\section{INTERESTS}
+
+\begin{itemize}
+	\item Guitar, Trombone, Piano, League of Legends, Skiing, Mountain biking
+\end{itemize}
+
+\end{document}
