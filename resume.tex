@@ -12,9 +12,9 @@
 \social[github]{GoneSahlin}
 
 \newcommand{\project}[5]{
-	\textbf{#1}
-%	\href{#2}{\:\small\faGithub\:}
-	$|$ #3 
+	\textbf{#1}\ifx&#2&{}
+	\else
+    		\href{#2}{\:\small\faGithub\:}\fi$|$ #3
 	\hfill\textit{#4}
 	#5
 	\vspace{2mm}
@@ -53,12 +53,11 @@
   \end{itemize}
 } 
 
-\columnbreak  
-
+\columnbreak
 
 \section{TECHNICAL SKILLS}
 {\begin{itemize}
-    \item Languages: C++, Java, Python
+    \item Languages: C++, Java, Python, C
     \item Tools: Git, Linux, Docker, Jupyter, Postgres
     \item Libraries: pandas, NumPy, scikit-learn, Matplotlib
   \end{itemize}
@@ -78,20 +77,20 @@
 \vspace*{-2mm}
 \section{PROJECTS}
 
+{\project{Stock Analyzer}{}{Python, Postgres, selenium}{Summer 2022}
+	{\begin{itemize}
+		\item Collects historical and current data from various sources using APIs and webscraping.
+		\item Performs analysis on current market trends.
+		\item Provides user with information on when to buy, hold, or sell stocks.
+	\end{itemize}}
+}
+
 {\project{Machine Learning for Real Estate}{}{Python, SQL, JS}{Ongoing}
 	{\begin{itemize}
 		\item Senior Design Project
 		\item Collects data on historical rental prices.
 		\item Predicts future rental prices.
 		\item Displays historical prices and predictions as a web app.
-	\end{itemize}}
-}
-
-{\project{Stock Analyzer}{}{Python, Postgres, selenium}{Summer 2022}
-	{\begin{itemize}
-		\item Collects historical and current data from various sources using APIs and webscraping.
-		\item Performs analysis on current market trends.
-		\item Provides user with information on when to buy, hold, or sell stocks.
 	\end{itemize}}
 }
 
@@ -115,11 +114,11 @@
 %    		\item Builds a graph of all possible states, calculates each state's probability of winning, and picks the best move.
 %	\end{itemize}}
 %}
-{\project{Ski Resort Database}{https://github.com/GoneSahlin/321_Final_Project}{SQL, HTML, PHP}{Fall 2021}
-	{\begin{itemize}
-    		\item Connects webpages to a mySQL database to display information on ski resorts.
-	\end{itemize}}
-}
+%{\project{Ski Resort Database}{https://github.com/GoneSahlin/321_Final_Project}{SQL, HTML, PHP}{Fall 2021}
+%	{\begin{itemize}
+%    		\item Connects webpages to a mySQL database to display information on ski resorts.
+%	\end{itemize}}
+%}
 %{\project{Yahtzee}{https://github.com/Gonzaga-University/yahtzee-final-game-a-a-r-o-n}{Java, Swing, JUnit}{Spring 2021}
 %	{\begin{itemize}
 %    		\item Models Yahtzee with a resizable GUI and customizable settings and utilizes JUnit to implement unit testing.
@@ -130,11 +129,11 @@
 %    		\item Classifies bike trails into difficulties using a SVM with a 66\% accuracy.
 %	\end{itemize}}
 %}
-%{\project{Linux Kernel Module}{https://github.com/GU-2021-Fall-CPSC346/hw5-linux-kernel-module-dev-GoneSahlin}{C}{Fall 2021}
-%	{\begin{itemize}
-%   		\item Modifies the Linux kernel with a simple module that can be loaded and unloaded.
-%	\end{itemize}}
-%}
+{\project{Linux Kernel Module}{https://github.com/GU-2021-Fall-CPSC346/hw5-linux-kernel-module-dev-GoneSahlin}{C}{Fall 2021}
+	{\begin{itemize}
+   		\item Modifies the Linux kernel with a simple module that can be loaded and unloaded.
+	\end{itemize}}
+}
 
 \vspace*{-2mm}
 \section{WORK EXPERIENCE}
