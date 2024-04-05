@@ -7,10 +7,23 @@
 \usepackage[scale=0.9]{geometry}
 \usepackage{multicol}
 
+
+%\makeatletter
+%\patchcmd{\makehead}{%search
+%    \ifthenelse{\equal{\@title}{}}{}{\titlestyle{~|~\@title}}\\%
+%    }{%replace
+%    \ifthenelse{\equal{\@title}{}}{}{\titlestyle{~|~\@title}}\\[.5cm]%
+%  }{%success
+%  }{%failure
+%  }
+%\makeatother
+
 \name{Zach}{Sahlin}
 \email{zach@sahlins.net}
 \mobile{206-607-7655}
 \social[github]{GoneSahlin}
+\social[linkedin]{zach-sahlin}
+
 
 \newcommand{\project}[5]{
 	\textbf{#1}\ifx&#2&{}
@@ -22,7 +35,7 @@
 }
 
 \newcommand{\entry}[4]{
-	\textbf{#1}\:$|$\:#2 
+	\textbf{#2}\:$|$\:#1 
 	\hfill\textit{#3}
 	#4
 	\vspace{2mm}
@@ -37,77 +50,74 @@
 }
 
 \begin{document}
+\vspace{4mm}
+\linespread{2}
 \maketitle
+\linespread{1}
 \vspace*{-12mm}
 
-\begin{multicols}{2}
 
-\section{RELATED COURSEWORK}
-{\begin{itemize}
-    \item Algorithms \& Abstract Data Structures
-    \item Machine Learning \& Intelligent Systems
-    \item Data Science Algorithms
-    \item Operating Systems
-    \item Database Management Systems
-    % \item Software Development
-    \item Programming Languages \& Compilers
-    \item Linux \& DevOps
-    % \item Natural Language Processing
-  \end{itemize}
-}
-
-\columnbreak
-
-\section{TECHNICAL SKILLS}
-{\begin{itemize}
-    \item Languages: C++, Java, Python, C, SQL
-    \item Tools: Git, Linux, Docker, Jupyter, GitHub Actions, Postgres, AWS Lambda, AWS S3
-    \item Libraries: TensorFlow, PyTorch, pandas, NumPy, scikit-learn, Matplotlib
-  \end{itemize}
-}
-\end{multicols}
-
-\vspace*{-4mm}
+%\vspace*{-4mm}
 \section{EDUCATION}
 
 \education{Gonzaga University}{Spokane, WA}{August 2019 -- May 2023}{BS in Computer Science, Minor in Applied Mathematics}
 	{\begin{itemize}
-%    		\item GPA: 3.8
-		\item Graduated Magna Cum Laude
-    		\item President's List: Fall 2019, Spring 2020, Spring 2021
-    		\item Dean's List: Fall 2020, Fall 2021, Spring 2022, Spring 2023
+    		\item GPA: 3.7, Magna Cum Laude
+%    		\item President's List: 3 semesters, Dean's List: 4 semesters
   	\end{itemize}
 }
 
 \vspace*{-2mm}
 \section{PROJECTS}
 
-{\project{Machine Learning for Real Estate}{}{Python, SQL, PyTorch, JS, Fast API}{Fall 2022 - Spring 2023}
-	{\begin{itemize}
-		\item Senior Design Project
-		\item Collects data on historical rental prices, crime data, and school scores.
-		\item Predicts future rental prices with an LSTM.
-		\item Leverages a REST API to connect the web app to the mySQL database.
-		\item Displays historical prices and predictions as a web app.
-	\end{itemize}}
-}
-
 {\project{Stock Predictor}{https://github.com/GoneSahlin/StocksAI}{Python, TensorFlow, AWS Lambda, AWS EventBridge, selenium}{Spring 2023}
 	{\begin{itemize}
-		\item Collects historical and current data from various sources using APIs and web scraping
-		\item Stores and retrieves data on AWS S3.
-		\item Uses an LSTM to predict weekly percentage increase.
-		\item Displays predictions on a web app.
-		\item Utilizes GitHub Actions for a CI/CD pipeline to test and publish to AWS Lambda.
-	\end{itemize}}
-}		
-
-{\project{Image Resizing CDN}{}{Python, AWS CloudFront, AWS Lambda, AWS S3, AWS CDK}{Fall 2022}
-	{\begin{itemize}
-		\item Automatically resizes and formats images using AWS Lambda.
-		\item Uses AWS CDK to deploy the stack.
+%		\item Collects historical and current data from various sources using APIs and web scraping.
+%		\item Stores and retrieves data on AWS S3.
+%		\item Uses an LSTM to predict weekly percentage increase.
+%		\item Displays predictions on a web app.
+%		\item Utilizes GitHub Actions for a CI/CD pipeline to test and publish to AWS Lambda.
+		\item Designed a model to predict short term prices of stocks.
+		\item Created a data pipeline with web scrapers and APIs to collect historical and current data from various sources.
+		\item Leveraged AWS S3 to store and retrieve data.
+		\item Implemented a CI/CD pipeline with GitHub Actions to test and publish to AWS Lambda.
+		\item Developed a web app to display predictions updated daily.
 	\end{itemize}}
 }
+
+{\project{Machine Learning for Real Estate}{}{Python, SQL, PyTorch, JS, Fast API}{Fall 2022 - Spring 2023}
+	{\begin{itemize}
+		\item Collaborated with my Senior Design group to apply machine learning to real estate
+		\item Collected, cleaned, and managed data on historical rental prices, crime data, and school scores
+		\item Implemented and trained an LSTM to predict future rent prices
+		\item Improved the REST API to decrease front end load time from 5 minutes to about 5 seconds
+		\item Developed a web app to display historical prices and predictions in a graphical interface
+	\end{itemize}}
+}
+
+%{\project{All Pairs Shortest Path Algorithm Analysis}{https://github.com/GoneSahlin/AllPairsShortestPaths}{C++}{Fall 2022}
+%	{\begin{itemize}
+%		\item Implements Johnson's algorithm and the Floyd-Warshall algorithm.
+%		\item Tests the performance of both algorithms in different graph densities.
+%	\end{itemize}}
+%}
+
+{\project{Resume Builder}{https://github.com/GoneSahlin/ResumeBuilder}{Python, JavaScript, TypeScript, React, Next.js, MongoDB, LaTeX, AWS Lambda}{Fall 2023}
+	{\begin{itemize}
+		\item Created a React Next.js web app to allow users to input resume content and manage multiple resumes
+		\item Developed an AWS Lambda function to format a resume in LaTeX and build the resume as a PDF
+		\item Solved Lambda dependency and image size constraints by leveraging AWS ECR
+	\end{itemize}}
+}
+
+
+%{\project{Image Resizing CDN}{}{Python, AWS CloudFront, AWS Lambda, AWS S3, AWS CDK}{Fall 2023}
+%	{\begin{itemize}
+%		\item Automatically resizes, reformats, and caches images using AWS Lambda and AWS CloudFront.
+%		\item Uses AWS CDK to deploy the stack.
+%	\end{itemize}}
+%}
+
 
 %{\project{Baseball Tracker Android App}{https://github.com/GoneSahlin/BaseballTracker}{Kotlin, Android Studio}{Fall 2022}
 %	{\begin{itemize}
@@ -143,7 +153,7 @@
 %	{\begin{itemize}
 %    		\item Uses a decision tree and kNN to predict whether I will skip a song with an 81\% accuracy.
 %    		\item Connects to the Spotify API to gather additional data on each song.
-%%   		 \item Uses Matplotlib to create plots to analyze the dataset.
+%   		 \item Uses Matplotlib to create plots to analyze the dataset.
 %	\end{itemize}}
 %}
 
@@ -182,8 +192,8 @@
 \section{RESEARCH}
 {\project{Long Span Truss Analysis and Optimization}{}{MATLAB}{Spring 2023}
 	{\begin{itemize}
-		\item Worked with Dr. Sara Ganzerli and civil engineering students.
-		\item Developed a script to analyze and optimize a truss to minimize material use within the load constraints.
+		\item Partnered with Dr. Sara Ganzerli, Professor of Civil Engineering, and  with civil engineering students
+		\item Developed a script to analyze and optimize a truss to minimize material use within the load constraints
 	\end{itemize}}
 }
 
@@ -192,18 +202,18 @@
 
 \entry{Gonzaga University}{Teaching Assistant}{August 2022 -- May 2023}
 {\begin{itemize}
-	\item Teaching assistant for Operating Systems, Computer Security, and Internet of Things.
-	\item Graded programming and written assignments.
+	\item Assisted Dr. Yanping Zhang in Operating Systems, Computer Security, and Internet of Things courses
+	\item Critically analyzed, tested, and graded programming and written assignments
 \end{itemize}
 }
 
 \entry{iD Tech}{Online Private Instructor}{June 2021 -- August 2022}
 {\begin{itemize}
-    \item Tutored in 8 different computer science topics, including C++, Java, and Python.
-    \item Completed over 200 private lessons.
+    \item Tutored in 8 different computer science topics, including C++, Java, and Python
+    \item Completed over 200 private lessons
     % \item Completed over 100 private lessons in various computer science topics including C++, Java, and Python.
-    \item Formed relationships with long-term clients, and developed further skills in communication and coding.
-    \item Collaborated with other instructors to improve teaching methods.
+    \item Formed relationships with long-term clients, and further developed skills in communication and coding
+    \item Collaborated with other instructors to improve teaching methods
   \end{itemize}
 }
 
@@ -222,5 +232,31 @@
 %     		\item Served as a "buddy" for sibling of a seriously ill patient, accompanying him in all camp activities.
 %	\end{itemize}}
 %}
+
+\begin{multicols}{2}
+\section{RELATED COURSEWORK}
+{\begin{itemize}
+    \item Algorithms \& Abstract Data Structures
+    \item Machine Learning \& Intelligent Systems
+    \item Data Science Algorithms
+    \item Operating Systems
+    \item Database Management Systems
+    % \item Software Development
+    \item Programming Languages \& Compilers
+    \item Linux \& DevOps
+    \item Natural Language Processing
+  \end{itemize}
+}
+
+\columnbreak
+
+\section{TECHNICAL SKILLS}
+{\begin{itemize}
+    \item Languages: C++, Java, Python, C, SQL
+    \item Tools: Git, Linux, Docker, Jupyter, GitHub Actions, Postgres, AWS Lambda, AWS S3
+    \item Libraries: TensorFlow, PyTorch, pandas, NumPy, scikit-learn, Matplotlib
+  \end{itemize}
+}
+\end{multicols}
 
 \end{document}
