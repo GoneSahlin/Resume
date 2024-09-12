@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.2)  14 APR 2024 21:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.25)  11 SEP 2024 21:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -936,10 +936,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--46
 
  []
 
-
-Overfull \vbox (11.25595pt too high) has occurred while \output is active []
-
-
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./resume.aux)
@@ -947,12 +943,12 @@ Package rerunfilecheck Info: File `resume.out' has not changed.
 (rerunfilecheck)             Checksum: 1DCD7C0888EFDB55C18DBD5939EB4989;637.
  ) 
 Here is how much of TeX's memory you used:
- 25980 strings out of 480204
- 502381 string characters out of 5895010
- 800113 words of memory out of 5000000
- 43449 multiletter control sequences out of 15000+600000
+ 25980 strings out of 478287
+ 502381 string characters out of 5849289
+ 805007 words of memory out of 5000000
+ 43695 multiletter control sequences out of 15000+600000
  502122 words of font info for 72 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
+ 1141 hyphenation exceptions out of 8191
  129i,11n,122p,1003b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc}{/us
 r/share/texmf/fonts/enc/dvips/tex-gyre/q-rm.enc}{/usr/share/texlive/texmf-dist/
@@ -966,7 +962,7 @@ blic/fontawesome5/FontAwesome5Free-Solid.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/tex
 -gyre/qplb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/sha
 re/texmf/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on resume.pdf (1 page, 242240 bytes).
+Output written on resume.pdf (1 page, 242437 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream
